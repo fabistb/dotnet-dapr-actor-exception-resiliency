@@ -1,0 +1,18 @@
+apiVersion: dapr.io/v1alpha1
+kind: Resiliency
+metadata:
+  name: actor-resiliency-resiliency
+scopes:
+  - actor-resiliency
+spec:
+  policies:
+    retries:
+      actorRetry:
+        policy: constant
+        duration: 10s
+        maxRetries: 15
+
+  targets:
+    actors:
+      ActorOne:
+        retry: actorRetry

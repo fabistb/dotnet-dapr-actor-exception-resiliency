@@ -1,5 +1,4 @@
 using ActorResiliency.Infrastructure;
-using Dapr.Actors;
 using Dapr.Actors.Runtime;
 
 namespace ActorResiliency.Actors;
